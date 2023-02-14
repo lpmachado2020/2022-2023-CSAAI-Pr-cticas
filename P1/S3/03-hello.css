@@ -2,15 +2,15 @@
 
 /* Estilo para el cuerpo del HTML */
 body {
-    background-color: lightblue;
+    background-color: rgb(255, 246, 152);
   }
   
   /* Estilo para las etiquetas de tipo h1 */
   h1 {
-    color:black;
+    color:rgb(255, 62, 62);
   }
   
   /* Estilo para los párrafos */
   p {
-    color: blue;
+    color: rgb(76, 76, 255);
   }
