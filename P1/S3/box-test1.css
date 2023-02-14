@@ -41,10 +41,13 @@ p {
 
   /*Ejemplo 3 body border: solid; border-color: red;*/
 
-  /*Ejemplo 4 margin: 10px;*/
+  /*Ejemplo 4 body margin: 10px;*/
 
-  /*Ejemplo 5 padding: 5px;*/
+  /*Ejemplo 5 body padding: 5px;*/
 
-  margin: 10px
+  /*Ejemplo 6 p margin: 10px*/
+
+  /*Calculando el tamaño de un objeto usamos: box-sizing: border-box;
+  es para medir width y height de todo el conjunto de los datos usados anteriormente*/
 
 
