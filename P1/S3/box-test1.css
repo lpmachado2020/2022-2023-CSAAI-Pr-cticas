@@ -1,0 +1,50 @@
+/* Ponemos a cero todas las propiedades del cuerpo */
+/* Sin marge, sin relleno y sin borde              */
+body {
+    padding: 5px;
+    margin: 10px;
+    border: solid;
+    border-color: red;
+  }
+  
+  /*  Propiedades de la caja del párrafo
+      Ponemos todo a cero, pero activamos el borde
+      para verlo. Y lo ponemos de color azul
+  */
+
+  p {
+    margin: 10px; /* Margen con el exterior */
+    padding:10px; /* Margen texto y el borde del cuadrado*/
+    border:solid; /* Definir el estado del borde. De este modo se ve*/
+    border-color: blue; /* Color del borde*/
+  }
+
+
+/* Estado inicial 
+  body {
+    padding: 0px;
+    margin: 0px;
+    border: none; No hay borde
+    
+p {
+    margin: 0px;
+    padding:10px; 
+    border:solid; 
+    border-color: blue;
+*/
+
+    
+
+  /*Ejemplo 1 p padding:0px;*/
+
+  /*Ejemplo 2 p padding:10px; aumenta el tamaño entre el texto y el borde*/
+
+  /*Ejemplo 3 body border: solid; border-color: red;*/
+
+  /*Ejemplo 4 margin: 10px;*/
+
+  /*Ejemplo 5 padding: 5px;*/
+
+  margin: 10px
+
+

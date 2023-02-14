@@ -66,5 +66,8 @@ img {
 
 h2.titulo {
   color:green;
-
+  padding: 10%;
+  border: solid;
+  border-color: black;
+  margin: 0%;
 }

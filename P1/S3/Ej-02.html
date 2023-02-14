@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="Ej-02.css">
+  </head>
+
+  <body>
+    <div>
+      <p style="color:red;">P1</p> <!--Red. REGLA 1, gana el rojo--> 
+      <p id="quien">P2</p> <!--Orange. REGLA 5, gana naranja-->
+      <p class="cual">P3</p> <!--Green. REGLA 5, gana verde-->
+      <p>P4</p> <!--Blue. Por hoja de estilo-->
+    </div>
+  </body>
+</html>
+
+<!--¿Cuál sería el color de P4 si se elimina la regla de estilo 1?
+
+    Yellow del div, que lo hereda porque es su contenedor más cercano con estilo
+
+¿Cuál sería el color de P4 si se eliminan las reglas de estilo 1 y 2?
+    
+    Pink del color del body
+-->
