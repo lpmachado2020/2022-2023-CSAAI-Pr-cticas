@@ -63,11 +63,3 @@ img {
 }
 
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
-
-h2.titulo {
-  color:green;
-  padding: 10%;
-  border: solid;
-  border-color: black;
-  margin: 0%;
-}
