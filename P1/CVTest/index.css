@@ -65,20 +65,27 @@ img {
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
 
 h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: black;
   text-align: center;
   letter-spacing: 12px;
 }
 
-.encabezado {
+.e1 {
+  box-sizing: border-box;
   color: black;
   padding: 5px;
   margin: 10px;
   border: solid;
   border-color: black;
+  text-align: center;
 }
 
 .img {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
