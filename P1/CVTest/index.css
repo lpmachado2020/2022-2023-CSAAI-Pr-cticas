@@ -28,11 +28,11 @@ clear: both;
 }
 
 #c1 {
-    background-color:rgb(185, 57, 57);
+    background-color:#b93939;
 }
 
-#c2 {
-    background-color:rgb(255, 112, 112);
+/*#c2 {
+    background-color:rgb(255, 255, 255);
 }
 
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
@@ -64,28 +64,74 @@ img {
 
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
 
+body {
+  background-image: url("");
+}
+
 h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: black;
+  font-weight: 100;
+  color:black;
   text-align: center;
-  letter-spacing: 12px;
+  letter-spacing: 25px;
+  border: solid;
+  border-color: black;
+  border-width: 5px;
+  padding: 10px;
+}
+
+.e0 {
+  box-sizing: border-box;
+  color: black;
+  letter-spacing: 10px;
+  line-height: 15px;
 }
 
 .e1 {
   box-sizing: border-box;
   color: black;
-  padding: 5px;
-  margin: 10px;
-  border: solid;
-  border-color: black;
-  text-align: center;
+  letter-spacing: 10px;
+  line-height: 15px;
 }
 
 .img {
   width: 20px;
   height: 20px;
+  vertical-align: middle;
+}
+
+.img1 {
+  width: 20px;
+  height: 12px;
+  vertical-align: middle;
 }
 
 h2 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+.e2 {
+  color: #b93939;
+  letter-spacing: 10px;
+  padding-left: 12px;
+}
+
+.parrafo {
+  padding-left: 12px;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+ul,ol {
+  padding-left: 40px;
+}
+
+p {
+  padding-left: 20px;
+}
+
+/*.derecha {
+  background-image: url(images/101073.gif);
+}*/
