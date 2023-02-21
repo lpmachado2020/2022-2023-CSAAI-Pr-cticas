@@ -13,15 +13,28 @@
 }
 
 body {
-    background-image: url(images/wandavision.webp);
+    background-image: url(images/wandavision.jpg);
     backdrop-filter: blur(5px);;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    float: center;
+    padding: 30px;
+    min-height: 820px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 h1 {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
+    color: #ffffff;
 }
 
 h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ffffff;
+}
+
+p, ul {
+    color: #ffffffbc;
 }

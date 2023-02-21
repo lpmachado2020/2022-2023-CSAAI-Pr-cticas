@@ -8,8 +8,8 @@
 /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
 .columna {
 float: left;
-padding: 10px;
-min-height: 500px;
+padding: 20px;
+min-height: 600px;
 }
 
 .izquierda {
@@ -31,7 +31,7 @@ clear: both;
     background-color:#b93939;
 }
 
-/*#c2 {
+#c2 {
     background-color:rgb(255, 255, 255);
 }
 
@@ -39,8 +39,8 @@ clear: both;
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .iresponsive {
@@ -64,13 +64,10 @@ img {
 
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
 
-body {
-  background-image: url("");
-}
 
 h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight: 100;
+  font-weight: 100; /* Anchura de las letras*/
   color:black;
   text-align: center;
   letter-spacing: 25px;
@@ -80,15 +77,7 @@ h1 {
   padding: 10px;
 }
 
-.e0 {
-  box-sizing: border-box;
-  color: black;
-  letter-spacing: 10px;
-  line-height: 15px;
-}
-
 .e1 {
-  box-sizing: border-box;
   color: black;
   letter-spacing: 10px;
   line-height: 15px;
@@ -101,9 +90,9 @@ h1 {
 }
 
 .img1 {
-  width: 20px;
-  height: 12px;
-  vertical-align: middle;
+  width: 20px; /* Ancho*/
+  height: 12px; /* Altura*/
+  vertical-align: middle; /* Alineamos la imagen y el texto*/
 }
 
 h2 {
@@ -112,26 +101,35 @@ h2 {
 
 .e2 {
   color: #b93939;
-  letter-spacing: 10px;
-  padding-left: 12px;
-}
-
-.parrafo {
-  padding-left: 12px;
+  letter-spacing: 10px; /* Espacio entre letras*/
+  padding-left: 12px; /* Margen a la derecha*/
 }
 
 li {
-  padding-bottom: 10px;
+  padding-bottom: 10px; /* Separacion entre los elementos*/
 }
 
 ul,ol {
-  padding-left: 40px;
+  padding-left: 50px;
 }
 
 p {
   padding-left: 20px;
 }
 
-/*.derecha {
-  background-image: url(images/101073.gif);
-}*/
+.parrafo {
+  padding-left: 13px;
+}
+
+.foto2 {
+  
+}
+
+.gift {
+  width: 380px;
+  height: 214px;
+}
+
+.piefoto {
+  
+}
