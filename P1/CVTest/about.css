@@ -39,7 +39,7 @@ body {
 
 h1 {
     font-family:Impact, 'Arial Narrow Bold', sans-serif;
-    font-family: 100;
+    font-weight: 100;
     text-align: center;
     color: #ffffff;
     text-shadow: black 0.1em 0.1em 0.2em
