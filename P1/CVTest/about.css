@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 100px) {
     .columna {
       width: 100%;
     }
@@ -34,10 +34,7 @@ body {
     filter: grayscale(100%);
     padding: 30px;
     min-height: 820px;
-    margin-top: 70px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 70px;
+    margin: 5%;
 }
 
 h1 {
