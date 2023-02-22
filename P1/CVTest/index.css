@@ -9,7 +9,7 @@
 .columna {
 float: left;
 padding: 20px;
-min-height: 600px;
+min-height: 700px;
 }
 
 .izquierda {
@@ -52,7 +52,7 @@ img {
 /* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
 /* Así conseguimos que el contenido se vea bien en dispositvos móviles */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .columna {
       width: 100%;
     }
@@ -132,4 +132,8 @@ p {
 
 .blanco {
   color: white;
+}
+
+.enlace {
+  color: #b93939;
 }
