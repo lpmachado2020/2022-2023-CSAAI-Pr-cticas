@@ -52,7 +52,7 @@ img {
 /* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
 /* Así conseguimos que el contenido se vea bien en dispositvos móviles */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1050px) {
     .columna {
       width: 100%;
     }
@@ -150,7 +150,6 @@ p {
 
 .blanco {
   color: white;
-  padding-right: 10px;
 }
 
 .enlace {
