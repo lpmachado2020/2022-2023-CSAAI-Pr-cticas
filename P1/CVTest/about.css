@@ -45,12 +45,14 @@ h1 {
     font-family: 100;
     text-align: center;
     color: #ffffff;
+    text-shadow: black 0.1em 0.1em 0.2em
 }
 
 h2 {
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
     color: #ffffff;
+    text-shadow: black 0.1em 0.1em 0.2em
 }
 
 p, ul {
@@ -63,4 +65,5 @@ p, ul {
 
 p, li {
     font-family: Montserrat, Helvetica, sans-serif;
+    text-shadow: black 0.1em 0.1em 0.2em
 }
