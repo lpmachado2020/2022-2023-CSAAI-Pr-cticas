@@ -78,7 +78,7 @@ h1 {
 }
 
 .e1 {
-  color: black;
+  color: rgb(255, 255, 255);
   letter-spacing: 10px;
   line-height: 15px;
 }
@@ -122,14 +122,20 @@ p {
 }
 
 .foto2 {
-  
+
 }
 
-.gift {
-  width: 380px;
-  height: 214px;
+.gif {
+  width: 840px;
+  height: 473px;
+  width: 100%;
+  height: auto;
 }
 
 .piefoto {
-  
+  text-align: center;
+}
+
+.blanco {
+  color: white;
 }

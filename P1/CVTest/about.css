@@ -14,14 +14,16 @@
 
 body {
     background-image: url(images/wandavision.jpg);
-    backdrop-filter: blur(5px);;
+    background-position: center;
+    backdrop-filter: blur(5px);
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    float: center;
     padding: 30px;
     min-height: 820px;
+    margin-top: 70px;
     margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 70px;
 }
 
 h1 {
@@ -37,4 +39,8 @@ h2 {
 
 p, ul {
     color: #ffffffbc;
+}
+
+.curriculum {
+    color: #ffffff;
 }
