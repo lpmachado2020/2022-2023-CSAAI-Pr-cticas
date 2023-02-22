@@ -12,6 +12,20 @@
     }
 }
 
+@font-face {
+    font-family: "Impact";
+    src: url('fonts/impact.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+@font-face {
+    font-family: "Montserrat";
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 body {
     background-image: url(images/wandavision.jpg);
     background-position: center;
@@ -27,13 +41,15 @@ body {
 }
 
 h1 {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: 100;
     text-align: center;
     color: #ffffff;
 }
 
 h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
     color: #ffffff;
 }
 
@@ -43,4 +59,8 @@ p, ul {
 
 .curriculum {
     color: #ffffff;
+}
+
+p, li {
+    font-family: Montserrat, Helvetica, sans-serif;
 }

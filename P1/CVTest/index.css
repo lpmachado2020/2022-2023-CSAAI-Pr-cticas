@@ -64,13 +64,26 @@ img {
 
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
 
+@font-face {
+  font-family: "Impact";
+  src: url('fonts/impact.ttf') format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url('fonts/Montserrat-VariableFont_wght.ttf') format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 100; /* Anchura de las letras*/
   color:black;
   text-align: center;
-  letter-spacing: 25px;
+  letter-spacing: 30px;
   border: solid;
   border-color: black;
   border-width: 5px;
@@ -96,7 +109,8 @@ h1 {
 }
 
 h2 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  font-weight: 100;
 }
 
 .e2 {
@@ -107,6 +121,7 @@ h2 {
 
 li {
   padding-bottom: 10px; /* Separacion entre los elementos*/
+  font-family: Montserrat, Helvetica, sans-serif;
 }
 
 ul,ol {
@@ -115,6 +130,7 @@ ul,ol {
 
 p {
   padding-left: 20px;
+  font-family: Montserrat, Helvetica, sans-serif;
 }
 
 .parrafo {
@@ -128,6 +144,8 @@ p {
 
 .piefoto {
   text-align: center;
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-style: bold;
 }
 
 .blanco {
@@ -135,5 +153,6 @@ p {
 }
 
 .enlace {
-  color: #b93939;
+  color: #ff4d4d;
 }
+
