@@ -30,7 +30,7 @@ body {
     background-image: url(images/wandavision.jpg);
     background-position: center;
     backdrop-filter: blur(5px);
-    /*-webkit-filter: grayscale(100%);*/
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     padding: 30px;
     min-height: 820px;
