@@ -14,3 +14,6 @@ const test = document.getElementById('test')
 //-- pulsación de botón: que se ejecute la
 //-- funcion manejador_parrafo()
 test.onclick = manejador_parrafo;
+
+// -- manejador_parrafo lo usamos como objeto
+// -- por eso se utiliza sin parentesis
