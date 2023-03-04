@@ -1,10 +1,10 @@
 console.log("Ejecutando js...")
 
 //-- Leer el párrafo identificado como test
-const test = document.getElementById('test')
+var button = document.getElementById('button')
 
 //-- Configurar el manejador para el evento de
 //-- pulsación de botón
-test.onclick = () => {
+button.onclick = () => {
   console.log("Mensaje de prueba al hacer click")
 }
