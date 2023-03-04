@@ -6,5 +6,5 @@ const test = document.getElementById('test')
 //-- Configurar el manejador para el evento de
 //-- pulsación de botón
 test.onclick = () => {
-    console.log("No es nada especial este mensaje, solo un mensaje por consola")
+  console.log("Mensaje de prueba al hacer click")
 }
