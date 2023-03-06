@@ -19,7 +19,7 @@ const counter = {
   }
 }
 
-const counter = {
+const counter2 = {
     valor: 0,
     dec : function(value) {
       this.valor += value;
@@ -33,6 +33,7 @@ gui.boton.onclick = () => {
   counter.inc(1)
 }
 
+//-- Decrementa el contador
 gui.boton.onclick = () => {
-    counter.dec(-1)
+    counter2.dec(-1)
   }
