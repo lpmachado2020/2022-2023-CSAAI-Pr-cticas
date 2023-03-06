@@ -19,21 +19,14 @@ const counter = {
   }
 }
 
-const counter2 = {
-    valor: 0,
-    dec : function(value) {
-      this.valor += value;
-      gui.display.innerHTML = this.valor;
-    }
-  }
+// ESTAS SON LAS FUNCIONES DEL PROGRAMA
 
-//-- Acciones: Ligar el botón al contador
-//-- El counter.inc(1) indica que queremos incrementar 1 el valor 0 mediante el metodo inc
-gui.boton.onclick = () => {
+//-- Aumenta el contador
+gui.boton_inc.onclick = () => {
   counter.inc(1)
 }
 
 //-- Decrementa el contador
-gui.boton.onclick = () => {
-    counter2.dec(-1)
+gui.boton_dec.onclick = () => {
+    counter.inc(-1)
   }
