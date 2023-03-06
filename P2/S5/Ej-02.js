@@ -1,5 +1,4 @@
-//-- Contador de clicks de boton
-//-- Arranca cuando el DOM esta listo por el atributo defer
+//-- Contador de clics de botón
 
 console.log("Ejecutando JS...");
 
@@ -7,16 +6,17 @@ console.log("Ejecutando JS...");
 const display = document.getElementById("display");
 const boton = document.getElementById("boton");
 
-//-- Contador de clicks. let es como se define una variable = objetos literales
-let cont = 0; //-- Comienza en cero
+//-- Contador de clicks
+let cont = 0;
 
 //-- Configurar retrollamada del boton
 boton.onclick = () => {
   console.log("Click!");
 
   //-- Incrementar contador
-  cont += 1; //-- Se incrementa en 1
+  cont += 1;
 
   //-- Actualizar el display
-  display.innerHTML = cont;
+  //-- Dejamos los valores anteriores y lo añadimos despues
+  display.innerHTML += ' ' + cont;
 }
