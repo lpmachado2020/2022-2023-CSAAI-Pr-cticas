@@ -26,7 +26,7 @@ function counter(display)
   //-- Almacenar su display
   this.display = display;
 
-  //-- Actualizar el contador
+  //-- Actualizar el contador-
   //-- y mostrarlo en el display
   this.inc = (value) => {
     this.valor += value;
