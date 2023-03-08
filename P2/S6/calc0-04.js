@@ -2,6 +2,9 @@ console.log("Ejecutando JS...");
 
 display = document.getElementById("display")
 suma = document.getElementById("suma")
+resta = document.getElementById("resta")
+producto = document.getElementById("producto")
+division = document.getElementById("division")
 igual = document.getElementById("igual")
 clear = document.getElementById("clear")
 
@@ -65,17 +68,31 @@ for (let boton of digitos) {
 //-------- Resto de funciones de retrollamada
 
 //-- Operación de sumar
-suma.onclick = (ev) => {
+// suma.onclick = (ev) => {
 
-    //-- Insertar simbolo de sumar
-    display.innerHTML += ev.target.value;
+//     //-- Insertar simbolo de sumar
+//     display.innerHTML += ev.target.value;
 
-    //-- ¡Ojo! Aquí se inserta el + siempre!
-    //-- Para que la calculadora funcione bien
-    //-- sólo se debe permitir insertar el operador
-    //-- en el estado OP1, y debe cambiar el estado
-    //-- a OPERATION (según el diagrama de estados)
+//     //-- ¡Ojo! Aquí se inserta el + siempre!
+//     //-- Para que la calculadora funcione bien
+//     //-- sólo se debe permitir insertar el operador
+//     //-- en el estado OP1, y debe cambiar el estado
+//     //-- a OPERATION (según el diagrama de estados)
   
+// }
+
+//-- Establecer la misma función de retrollamada
+//-- para todos los botones de tipo operación
+operaciones = document.getElementsByClassName("operacion")
+
+for  (let boton of operaciones) {
+
+    //-- Se ejecuta cuando se pulsa un boton
+    //-- que es una operación
+    boton.onclick = (ev) => {
+        display.innerHTML += ev.target.value;
+        console.log("OPERACIÓN");
+    }
 }
 
 //-- Evaluar la expresión
