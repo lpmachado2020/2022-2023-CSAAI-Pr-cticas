@@ -5,7 +5,9 @@
 // Cada vez que damos a reseat se genera una nueva clave
 console.log("Ejecutando JS...");
 
-clave = [];
+let clave = [];
+const claveAdivinar = "claveAdivinar";
+const crono = new Crono(document.getElementById("crono"))
 
 function generarClave() {
     let clave = "";
@@ -35,14 +37,14 @@ function mostrarDigito(digito, clave, posicion) {
 
 function color(posicion, color) {
     let digitos = document.getElementsByClassName("digito");
-    digitos[posicion].getElementsByClassName.color = color;
+    digitos[posicion].style.color = color;
 }
 
-function inicio() {
+function inicio(ev) {
     if (!crono.timer) {
         crono.start();
     }
-    let num = this.innerHTML;
+    let num = ev.target.innerHTML;
     let numSecreto = clave.indexOf(num);
     if (numSecreto > -1) {
         mostrarDigito(num, clave, numSecreto);
@@ -57,6 +59,7 @@ function inicio() {
         let display = document.getElementById("display");
         let valorDisplay = parseInt(display.innerHTML);
         display.innerHTML = valorDisplay + 1;
-        this.style.color = "red";
+        ev.target.style.color = "red";
     }
 }
+
