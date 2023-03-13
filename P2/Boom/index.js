@@ -5,7 +5,6 @@
 // Cada vez que damos a reseat se genera una nueva clave
 console.log("Ejecutando JS...");
 
-let clave = [];
 const claveAdivinar = "claveAdivinar";
 const crono = new Crono(document.getElementById("crono"))
 
@@ -18,10 +17,7 @@ function generarClave() {
 }
 
 function mostrarClave(clave) {
-    let claveSecreta = "";
-    for (let i = 0; i < clave.length; i++) {
-        claveSecreta += "*";
-    }
+    let claveSecreta = "*".repeat(clave.length);
     document.getElementById(claveAdivinar).innerHTML = claveSecreta;
 }
 
@@ -49,16 +45,18 @@ function inicio(ev) {
     if (numSecreto > -1) {
         mostrarDigito(num, clave, numSecreto);
         color(numSecreto, "green");
-        
-        clave[numSecreto] = null;
-        if (clave.every((x) => x === null)) {
+        clave = clave.substring(0, numSecreto) + null + clave.substring(numSecreto + 1);
+        if (!clave.includes(num)) {
+            ev.target.removeEventListener("click", inicio)
+        }
+        if (!clave.includes(null)) {
             crono.stop();
             alert("¡Has conseguido adivinar el numero! Tu tiempo ha sido de " + crono.display.innerHTML);
         }
     } else {
         let display = document.getElementById("display");
         let valorDisplay = parseInt(display.innerHTML);
-        display.innerHTML = valorDisplay + 1;
+        display.innerHTML = ++valorDisplay;
         ev.target.style.color = "red";
     }
 }
