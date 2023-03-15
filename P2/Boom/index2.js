@@ -1,3 +1,7 @@
+console.log("Ejecutando JS...");
+
+const crono = new Crono(document.getElementById("crono"))
+
 //-- Array que almacena números secretos
 const secretkey = [];
 
