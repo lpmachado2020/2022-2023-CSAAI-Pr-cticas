@@ -6,14 +6,11 @@
 
 console.log("Ejecutando JS...");
 
-const digitos = document.getElementsByClassName("digito");
+let digitos = document.getElementsByClassName("digito");
+let clave = document.getElementsByClassName("clave");
+let count = 0;
 
-const clave1 = document.getElementById("clave1");
-const clave2 = document.getElementById("clave2");
-const clave3 = document.getElementById("clave3");
-const clave4 = document.getElementById("clave4");
-
-const clave = document.getElementsByClassName("clave");
+console.log(digitos)
 
 let secretkey = [];
 
@@ -36,19 +33,38 @@ const ESTADO = {
 
 let estado = ESTADO.INIT;
 
-//-- Funcion de estados
-function init() {
+//-- Funcion retrollamada de los botones y define los estados
+function digito(ev) {
+    console.log("Valor: " + ev);
+    //-- Definimos funcionalidad del primer estado
     if (estado == ESTADO.INIT) {
-        clave.innerHTML = "*";
-        getRandomInt(secretkey);
+        secretkey = getRandomInt();
+
+        //-- Pasamos al siguiente estado
+        estado = ESTADO.STATE_1;
+        crono.start();
+    }
+    
+    //-- Iteraciones sobre 
+    if (estado == ESTADO.STATE_1) {
+        i = 0;
+        for (let key of secretkey){
+            if (key == ev) {
+                clave[i].innerHTML = key;
+                count += 1;
+                console.log('count: ' + count);
+            }
+            i += 1;
+        }
+        console.log(count);
+        //-- Para el crono cuando se adivinen las cuatro
+        if (count == 4) {
+            crono.stop();
+        }
     }
 }
 
-//-- Funcion retrollamada de los botones
-function digito(value) {
-    console.log("Valor: " + value);
-}
-
+//-- Bucle que recorrer todos los digitos
 for (let boton of digitos) {
     boton.onclick = (ev) => {
         digito(ev.target.value)
@@ -85,6 +101,6 @@ gui.stop.onclick = () => {
 gui.reset.onclick = () => {
     console.log("Reset!");
     crono.reset();
-    // estado = ESTADO.INIT;
-    clave.innerHTML = "*";
+    //-- Recarga la pagina cuando se resetea
+    window.location.reload(); 
 }
