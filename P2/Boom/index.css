@@ -23,10 +23,16 @@ Para los fallos rojo */
     }
 } */
 
-/* body {
-    width: ;
-    height: ;
-} */
+body {
+    border: solid;
+    border-color: red;
+    border-width: 5px;
+    margin: 15px;
+    padding: 2px;
+    width: 500px;
+    height: auto;
+    align-items: center;
+}
 
 p {
     text-align: center;
@@ -42,9 +48,25 @@ p {
     color: white;
     font-size: 50px;
     text-align: center;
+    padding: 10px;
 }
 
-button {
+.digito {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 4px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    margin: 0px;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+}
+
+.manejadores {
     background-color: black;
     border: none;
     color: white;
@@ -55,4 +77,6 @@ button {
     font-size: 30px;
     margin: 0px;
     cursor: pointer;
+    width: 100px;
+    height: 50px;
 }

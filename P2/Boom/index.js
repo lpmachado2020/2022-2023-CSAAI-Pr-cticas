@@ -1,9 +1,3 @@
-// Primer estado, al pulsar un digito se pondra en marcha el contador
-
-// Ultimo esta cuando se adivinen toda la convinacion se parara el contador
-
-// Cada vez que damos a reseat se genera una nueva clave
-
 console.log("Ejecutando JS...");
 
 const digitos = document.getElementsByClassName("digito");
