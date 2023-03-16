@@ -7,6 +7,65 @@
 
 console.log("Ejecutando JS...");
 
+digitos = document.getElementsByClassName("digito");
+
+clave1 = document.getElementById("clave1");
+clave2 = document.getElementById("clave2");
+clave3 = document.getElementById("clave3");
+clave4 = document.getElementById("clave4");
+
+
+let secretkey = [];
+
+//-- Generar números aleatorios con un valor máximo
+function getRandomInt() {
+    for (let i = 0; i < 4; i++) {
+        secretkey += Math.floor(Math.random()*10)
+    }
+    return secretkey;
+}
+
+getRandomInt();
+console.log(secretkey);
+
+
+//-- Asociamos los valores de la clave secreta 
+function asociar() {
+        clave1 = secretkey[0];
+        clave2 = secretkey[1];
+        clave3 = secretkey[2];
+        clave4 = secretkey[3];
+}
+
+asociar();
+
+// //---- Necesitamos Estados
+// const ESTADO = {
+//     INIT: 0,
+//     STATE_1: 1,
+// }
+
+// let estado = ESTADO.INIT;
+
+// //-- Esta mal esta funcion
+// function numeroSecreto(ev) {
+//     if (estado == ESTADO.INIT)
+//         clave.innerHTML = ev.target.value;
+//         estado = ESTADO.STATE_1;
+// }
+
+// //-- Funcion de retrollamada para los botones
+// for (let boton of digitos) {
+//     boton.onclick = numeroSecreto;
+// }
+
+for (let boton of digitos) {
+    boton.onclick = (ev) => {
+        clave1.innerHTMl += ev.target.value;
+    }
+}
+
+
 //-- Elementos de la gui
 const gui = {
     display : document.getElementById("display"),
@@ -15,15 +74,8 @@ const gui = {
     reset : document.getElementById("reset")
 }
 
-console.log("Ejecuitando JS...");
-
 //-- Definir un objeto cronómetro
 const crono = new Crono(gui.display);
-
-//-- Generar números aleatorios con un valor máximo
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
 
 //---- Configurar las funciones de retrollamada
 
@@ -44,4 +96,3 @@ gui.reset.onclick = () => {
     console.log("Reset!");
     crono.reset();
 }
-
