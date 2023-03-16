@@ -6,12 +6,9 @@
 
 console.log("Ejecutando JS...");
 
-let digitos = document.getElementsByClassName("digito");
+const digitos = document.getElementsByClassName("digito");
 let clave = document.getElementsByClassName("clave");
 let count = 0;
-
-console.log(digitos)
-
 let secretkey = [];
 
 //-- Generar números aleatorios del 0 al 9
