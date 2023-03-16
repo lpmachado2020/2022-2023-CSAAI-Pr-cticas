@@ -17,7 +17,7 @@ clave4 = document.getElementById("clave4");
 
 let secretkey = [];
 
-//-- Generar números aleatorios con un valor máximo
+//-- Generar números aleatorios del 0 al 9
 function getRandomInt() {
     for (let i = 0; i < 4; i++) {
         secretkey += Math.floor(Math.random()*10)
@@ -59,11 +59,13 @@ asociar();
 //     boton.onclick = numeroSecreto;
 // }
 
+
 for (let boton of digitos) {
     boton.onclick = (ev) => {
         clave1.innerHTMl += ev.target.value;
     }
 }
+
 
 
 //-- Elementos de la gui
