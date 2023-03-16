@@ -42,6 +42,8 @@ function digito(ev) {
         for (let key of secretkey){
             if (key == ev) {
                 clave[i].innerHTML = key;
+                //-- Cuando se acierta cambiamos el color
+                clave[i].style.color = "green";
                 count += 1;
                 console.log('count: ' + count);
             }
