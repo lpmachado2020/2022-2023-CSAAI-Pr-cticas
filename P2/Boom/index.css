@@ -5,7 +5,7 @@ Para los fallos rojo */
 
 * {
     box-sizing: border-box;
-  }
+}
 
   /* .iresponsive {
     padding: 0 6px;
@@ -38,14 +38,10 @@ p {
 
 #display {
     background-color: black;
-    border: ;
+    border: none;
     color: white;
     font-size: 50px;
     text-align: center;
-}
-
-.digito {
-
 }
 
 button {
@@ -59,8 +55,4 @@ button {
     font-size: 30px;
     margin: 0px;
     cursor: pointer;
-}
-
-.manejadores {
-
 }
