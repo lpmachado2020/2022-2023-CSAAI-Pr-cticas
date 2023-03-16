@@ -1,9 +1,8 @@
-// // Primer estado, al pulsar un digito se pondra en marcha el contador
+// Primer estado, al pulsar un digito se pondra en marcha el contador
 
-// // Ultimo esta cuando se adivinen toda la convinacion se parara el contador
+// Ultimo esta cuando se adivinen toda la convinacion se parara el contador
 
-// // Cada vez que damos a reseat se genera una nueva clave
-// console.log("Ejecutando JS...");
+// Cada vez que damos a reseat se genera una nueva clave
 
 console.log("Ejecutando JS...");
 
@@ -37,14 +36,24 @@ const ESTADO = {
 
 let estado = ESTADO.INIT;
 
-function digito(ev) {
+//-- Funcion de estados
+function init() {
+    if (estado == ESTADO.INIT) {
+        clave.innerHTML = "*";
+        getRandomInt(secretkey);
+    }
 }
 
-//-- Funcion de retrollamada para los botones
+//-- Funcion retrollamada de los botones
+function digito(value) {
+    console.log("Valor: " + value);
+}
+
 for (let boton of digitos) {
-    boton.onclick = target.value
+    boton.onclick = (ev) => {
+        digito(ev.target.value)
+    }
 }
-
 
 //-- Elementos de la gui
 const gui = {
@@ -69,12 +78,13 @@ gui.start.onclick = () => {
 gui.stop.onclick = () => {
     console.log("Stop!");
     crono.stop();
+
 }
 
 //-- Reset del cronómetro
 gui.reset.onclick = () => {
     console.log("Reset!");
     crono.reset();
-    estado = ESTADO.INIT;
+    // estado = ESTADO.INIT;
     clave.innerHTML = "*";
 }
