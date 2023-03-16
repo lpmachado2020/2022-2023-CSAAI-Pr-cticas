@@ -7,73 +7,51 @@
 
 console.log("Ejecutando JS...");
 
-digitos = document.getElementsByClassName("digito");
+const digitos = document.getElementsByClassName("digito");
 
-clave1 = document.getElementById("clave1");
-clave2 = document.getElementById("clave2");
-clave3 = document.getElementById("clave3");
-clave4 = document.getElementById("clave4");
+const clave1 = document.getElementById("clave1");
+const clave2 = document.getElementById("clave2");
+const clave3 = document.getElementById("clave3");
+const clave4 = document.getElementById("clave4");
 
+const clave = document.getElementsByClassName("clave");
 
 let secretkey = [];
 
 //-- Generar números aleatorios del 0 al 9
 function getRandomInt() {
     for (let i = 0; i < 4; i++) {
-        secretkey += Math.floor(Math.random()*10)
+        secretkey += Math.floor(Math.random() * 10)
     }
     return secretkey;
 }
 
 getRandomInt();
-console.log(secretkey);
+console.log("Clave secreta: " + secretkey)
 
-
-//-- Asociamos los valores de la clave secreta 
-function asociar() {
-        clave1 = secretkey[0];
-        clave2 = secretkey[1];
-        clave3 = secretkey[2];
-        clave4 = secretkey[3];
+//---- Necesitamos estados
+const ESTADO = {
+    INIT: 0,
+    STATE_1: 1,
 }
 
-asociar();
+let estado = ESTADO.INIT;
 
-// //---- Necesitamos Estados
-// const ESTADO = {
-//     INIT: 0,
-//     STATE_1: 1,
-// }
+function digito(ev) {
+}
 
-// let estado = ESTADO.INIT;
-
-// //-- Esta mal esta funcion
-// function numeroSecreto(ev) {
-//     if (estado == ESTADO.INIT)
-//         clave.innerHTML = ev.target.value;
-//         estado = ESTADO.STATE_1;
-// }
-
-// //-- Funcion de retrollamada para los botones
-// for (let boton of digitos) {
-//     boton.onclick = numeroSecreto;
-// }
-
-
+//-- Funcion de retrollamada para los botones
 for (let boton of digitos) {
-    boton.onclick = (ev) => {
-        clave1.innerHTMl += ev.target.value;
-    }
+    boton.onclick = target.value
 }
-
 
 
 //-- Elementos de la gui
 const gui = {
-    display : document.getElementById("display"),
-    start : document.getElementById("start"),
-    stop : document.getElementById("stop"),
-    reset : document.getElementById("reset")
+    display: document.getElementById("display"),
+    start: document.getElementById("start"),
+    stop: document.getElementById("stop"),
+    reset: document.getElementById("reset")
 }
 
 //-- Definir un objeto cronómetro
@@ -86,7 +64,7 @@ gui.start.onclick = () => {
     console.log("Start!!");
     crono.start();
 }
-  
+
 //-- Detener el cronómetro
 gui.stop.onclick = () => {
     console.log("Stop!");
@@ -97,4 +75,6 @@ gui.stop.onclick = () => {
 gui.reset.onclick = () => {
     console.log("Reset!");
     crono.reset();
+    estado = ESTADO.INIT;
+    clave.innerHTML = "*";
 }
