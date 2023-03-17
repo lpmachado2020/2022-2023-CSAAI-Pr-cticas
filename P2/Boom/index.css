@@ -15,17 +15,12 @@ Para los fallos rojo */
 }
 
 body {
-    display: inline-block;
     background-color: yellow;
     border: solid;
     border-color: rgb(0, 0, 0);
     border-width: 10px;
-    margin: 15px;
-    padding: 2px;
-    width: 400px;
-    height: auto;
+    margin: auto;
     align-items: center;
-    text-align: center;
 }
 
 p {
