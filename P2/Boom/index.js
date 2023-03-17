@@ -34,17 +34,18 @@ function digito(ev) {
         //-- Pasamos al siguiente estado
         estado = ESTADO.STATE_1;
         crono.start();
+        document.body.style.backgroundColor = "red";
     }
     
-    //-- Iteraciones sobre cada click
+    //-- Iteraciones sobre cada click y comprobamos que pertenezca a la secretkey
     if (estado == ESTADO.STATE_1) {
         i = 0;
         for (let key of secretkey){
             if (key == ev) {
                 if (clave[i]) {
                 clave[i].innerHTML = key;
-                //-- Cuando se acierta cambiamos el color
-                clave[i].style.color = "green";
+                //-- Cuando se acierta cambiamos el color a verde
+                clave[i].style.color = "white";
                 count += 1;
                 console.log('Count: ' + count);
                 }
@@ -55,6 +56,7 @@ function digito(ev) {
         //-- Para el crono cuando se adivinen las cuatro
         if (count == 4) {
             crono.stop();
+            document.body.style.backgroundColor = "green";
         }
     }
 }

@@ -6,26 +6,17 @@ Para los fallos rojo */
 * {
     box-sizing: border-box;
     color: white;
-    background-color: yellow;
 }
 
-  /* .iresponsive {
-    padding: 0 6px;
-    float: left;
-    width: 50%;
-  }
-
-@media screen and (max-width: 1050px) {
-    .columna {
-      width: 100%;
-    }
-
+@media screen and (max-width: 1080px) {
     .iresponsive {
         width: 100%;
     }
-} */
+}
 
 body {
+    display: inline-block;
+    background-color: yellow;
     border: solid;
     border-color: rgb(0, 0, 0);
     border-width: 10px;
@@ -34,7 +25,6 @@ body {
     width: 400px;
     height: auto;
     align-items: center;
-    /*box-shadow: 5px 5px 8px rgb(0, 70, 135) 10px 10px 8px rgb(0, 88, 171) 15px 15px 8px rgb(0, 110, 214); */
 }
 
 p {
@@ -44,7 +34,6 @@ p {
 .clave {
     font-size: 50px;
     color: black;
-    text-shadow: 2px 2px 4px white;
 }
 
 #display {
@@ -53,7 +42,7 @@ p {
     font-size: 50px;
     text-align: center;
     padding: 10px 88px;
-    box-shadow: 5px 5px 8px white;
+    box-shadow: 5px 5px 8px black;
 }
 
 .digito {
@@ -64,11 +53,11 @@ p {
     text-decoration: none;
     display: inline-block;
     font-size: 40px;
-    margin: 0px;
+    margin: 5px;
     cursor: pointer;
     width: 90px;
     height: 90px;
-    box-shadow: 5px 5px 8px white;
+    box-shadow: 4px 4px 10px black;
 }
 
 .manejadores {
@@ -83,5 +72,5 @@ p {
     cursor: pointer;
     width: 100px;
     height: 50px;
-    box-shadow: 5px 5px 8px white;
+    box-shadow: 5px 5px 8px black;
 }
