@@ -41,11 +41,13 @@ function digito(ev) {
         i = 0;
         for (let key of secretkey){
             if (key == ev) {
+                if (clave[i]) {
                 clave[i].innerHTML = key;
                 //-- Cuando se acierta cambiamos el color
                 clave[i].style.color = "green";
                 count += 1;
-                console.log('count: ' + count);
+                console.log('Count: ' + count);
+                }
             }
             i += 1;
         }
