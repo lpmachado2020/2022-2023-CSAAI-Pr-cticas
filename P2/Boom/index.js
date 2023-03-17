@@ -36,7 +36,7 @@ function digito(ev) {
         crono.start();
     }
     
-    //-- Iteraciones sobre 
+    //-- Iteraciones sobre cada click
     if (estado == ESTADO.STATE_1) {
         i = 0;
         for (let key of secretkey){
