@@ -5,6 +5,8 @@ Para los fallos rojo */
 
 * {
     box-sizing: border-box;
+    color: white;
+    background-color: yellow;
 }
 
   /* .iresponsive {
@@ -25,13 +27,14 @@ Para los fallos rojo */
 
 body {
     border: solid;
-    border-color: red;
-    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    border-width: 10px;
     margin: 15px;
     padding: 2px;
-    width: 500px;
+    width: 400px;
     height: auto;
     align-items: center;
+    /*box-shadow: 5px 5px 8px rgb(0, 70, 135) 10px 10px 8px rgb(0, 88, 171) 15px 15px 8px rgb(0, 110, 214); */
 }
 
 p {
@@ -40,21 +43,22 @@ p {
 
 .clave {
     font-size: 50px;
+    color: black;
+    text-shadow: 2px 2px 4px white;
 }
 
 #display {
     background-color: black;
     border: none;
-    color: white;
     font-size: 50px;
     text-align: center;
-    padding: 10px;
+    padding: 10px 88px;
+    box-shadow: 5px 5px 8px white;
 }
 
 .digito {
     background-color: black;
     border: none;
-    color: white;
     padding: 4px 4px;
     text-align: center;
     text-decoration: none;
@@ -62,14 +66,14 @@ p {
     font-size: 40px;
     margin: 0px;
     cursor: pointer;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
+    box-shadow: 5px 5px 8px white;
 }
 
 .manejadores {
     background-color: black;
     border: none;
-    color: white;
     padding: 4px 4px;
     text-align: center;
     text-decoration: none;
@@ -79,4 +83,5 @@ p {
     cursor: pointer;
     width: 100px;
     height: 50px;
+    box-shadow: 5px 5px 8px white;
 }
