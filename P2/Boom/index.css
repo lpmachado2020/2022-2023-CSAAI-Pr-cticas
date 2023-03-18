@@ -11,6 +11,7 @@ Para los fallos rojo */
 @media screen and (max-width: 407px) {
     .responsive {
         width: auto;
+        height: auto;
     }
 }
 
@@ -20,11 +21,9 @@ Para los fallos rojo */
 
 body {
     background-color: yellow;
-    border: solid;
-    border-color: black;
-    border-width: 10px;
     margin: auto;
     align-items: center;
+    position: relative;
 }
 
 #titulo {
