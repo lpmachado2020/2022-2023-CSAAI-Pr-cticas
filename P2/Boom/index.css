@@ -29,6 +29,7 @@ body {
 #titulo {
     text-align: center;
     color: black;
+    padding: 10px;
 }
 
 #instrucciones {
