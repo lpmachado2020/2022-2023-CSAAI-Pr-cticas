@@ -8,9 +8,9 @@ Para los fallos rojo */
     color: white;
 }
 
-@media screen and (max-width: 1080px) {
-    .iresponsive {
-        width: 100%;
+@media screen and (max-width: 407px) {
+    body {
+        width: auto;
     }
 }
 

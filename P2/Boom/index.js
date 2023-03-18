@@ -85,6 +85,7 @@ const crono = new Crono(gui.display);
 gui.start.onclick = () => {
     console.log("Start!!");
     crono.start();
+    document.body.style.backgroundColor = "red";
 }
 
 //-- Detener el cronómetro
