@@ -1,1 +1,2 @@
- # Práctica 3
+ # Práctica 3. Tiro parabólico
+
