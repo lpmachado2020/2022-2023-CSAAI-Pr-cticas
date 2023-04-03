@@ -36,14 +36,14 @@ let yop = 345;
 let xp = xop;
 let yp = yop;
 
-// //-- Dibujar el objetivo
-// dibujarO(xo,yo); // Pintar el objetivo
+//-- Dibujar el objetivo
+dibujarO(xo,yo); // Pintar el objetivo
 
 //-- Dibujar el proyectil
 dibujarP(xop, yop, 50, 50, "green"); // Pintar el proyectil
 
-// //-- Velocidad del proyectil
-// let velp = 1;
+//-- Velocidad del proyectil
+let velp = 1;
 
 //-- Función principal de actualización
 function lanzar() 
@@ -51,25 +51,28 @@ function lanzar()
 //-- Implementación del algoritmo de animación:
 
 //-- 1) Actualizar posición de los elementos
+xp = xp + velp;
 
 //-- 2) Borrar el canvas
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 //-- 3) Pintar los elementos en el canvas
+dibujarO(xo,yo); // Pintar el objetivo
+
 dibujarP(xp, yp, 50, 50, "blue"); // Pintar el proyectil
 
 //-- 4) Repetir
 requestAnimationFrame(lanzar);
 }
 
-// //-- Coordenadas iniciales del objetivo
-// let xomin = 200;
-// let xomax = 770;
-// let xo = 500; //getRandomXO(xomin,xomax);
-// let yo = 370;
+//-- Coordenadas iniciales del objetivo
+let xomin = 200;
+let xomax = 770;
+let xo = 500; //getRandomXO(xomin,xomax);
+let yo = 370;
 
-// let x = 500;
-// let y = 350;
+let x = 500;
+let y = 350;
 
 // //-- Array que almacena las coordenadas del objeto
 // const coordenadas = [];
@@ -84,27 +87,29 @@ requestAnimationFrame(lanzar);
 // console.log(x,y)
 
 
-// //-- función para pintar el objetivo
-// function dibujarO(x,y) {
+//-- función para pintar el objetivo
+function dibujarO(x,y) {
 
-//   //-- Pintando el objetivo
-//   ctx.beginPath();
+  //-- Pintando el objetivo
+  ctx.beginPath();
 
-//   //-- Dibujar un circulo: coordenadas x,y del centro
-//   //-- Radio, Angulo inicial y angulo final
-//   ctx.arc(x, y, 25, 0, 2 * Math.PI);
-//   ctx.strokeStyle = 'blue';
-//   ctx.lineWidth = 2;
-//   ctx.fillStyle = 'red';
+  //-- Dibujar un circulo: coordenadas x,y del centro
+  //-- Radio, Angulo inicial y angulo final
+  ctx.arc(x, y, 25, 0, 2 * Math.PI);
+  ctx.strokeStyle = 'blue';
+  ctx.lineWidth = 2;
+  ctx.fillStyle = 'red';
 
-//   //-- Dibujar el relleno
-//   ctx.fill()    
+  //-- Dibujar el relleno
+  ctx.fill()    
 
-//   //-- Dibujar el trazo
-//   ctx.stroke();
+  //-- Dibujar el trazo
+  ctx.stroke();
 
-//   ctx.closePath();
-// }
+  ctx.closePath();
+}
+
+
 
 //-- Elementos de la gui
 const gui = {
@@ -118,13 +123,14 @@ const crono = new Crono(gui.display);
 
 //-- Función de retrollamada del botón de disparo
 gui.btnLanzar.onclick = () => {
-  crono.start();
   lanzar();
+  crono.start();
   console.log("Start!!!")
 }
 
 //-- Función de retrollamada del botón iniciar
 gui.btnIniciar.onclick = () => {
   location.reload();
+  crono.reset();
   console.log("Reset!!!")
 }
