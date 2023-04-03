@@ -1,4 +1,3 @@
-// No me sale el rebote
 console.log("Ejecutando JS...");
 
 const canvas = document.getElementById("canvas");
