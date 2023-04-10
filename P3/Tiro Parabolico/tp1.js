@@ -74,8 +74,8 @@ dibujarP(xp, yp, lx, ly, "yellow"); // Pintar el proyectil
 // -- Coordenadas iniciales del objetivo
 let xomin = 100;
 let xomax = 675;
-// let x = getRandomInt(xomin, xomax);
-let x = 310;
+let x = getRandomInt(xomin, xomax);
+// let x = 310;
 let y = 275;
 
 //-- función para pintar el objetivo
@@ -104,10 +104,10 @@ function dibujarO(x,y) {
 dibujarO(x, y);
 
 
-// //-- Crear una funcion que genere posiciones nuevas del objeto
-// function getRandomXO(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1) + min);
-// }
+//-- Crear una funcion que genere posiciones nuevas del objeto
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 //-- Para usar los valores seleccionados de angulo y velocidad del disparo
 let angulo = angulo_disparo.value;
