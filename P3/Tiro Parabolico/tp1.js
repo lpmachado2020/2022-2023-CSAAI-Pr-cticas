@@ -6,8 +6,8 @@ const canvas = document.getElementById("ctiro");
 const angulo_disparo = document.getElementById("rangeField2");
 const velocidad_disparo = document.getElementById("rangeField1");
 
-const angulo_rango = document.getElementById("output2");
-const velocidad_rango = document.getElementById("output1");
+const angulo_valor = document.getElementById("output2");
+const velocidad_valor = document.getElementById("output1");
 
 //-- Definir el tamaño del canvas
 canvas.width = 700;
@@ -71,10 +71,11 @@ dibujarP(xp, yp, lx, ly, "yellow"); // Pintar el proyectil
 
 
 
-//-- Coordenadas iniciales del objetivo
-let xomin = 25;
-let xomax = 625;
-let x = Number(getRandomInt(xomin, xomax));
+// -- Coordenadas iniciales del objetivo
+let xomin = 100;
+let xomax = 675;
+// let x = getRandomInt(xomin, xomax);
+let x = 310;
 let y = 275;
 
 //-- función para pintar el objetivo
@@ -103,13 +104,28 @@ function dibujarO(x,y) {
 dibujarO(x, y);
 
 
-//-- Crear una funcion que genere posiciones nuevas del objeto
-function getRandomXO(xomin, xomax) {
-  return Math.floor(Math.random() * (xomax - xomin + 1) + xomin);
-}
+// //-- Crear una funcion que genere posiciones nuevas del objeto
+// function getRandomXO(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
 
-getRandomXO();
-console.log("Coordenadas del objetivo: " + x + y)
+//-- Para usar los valores seleccionados de angulo y velocidad del disparo
+let angulo = angulo_disparo.value;
+let velocidad = velocidad_disparo.value;
+
+angulo_disparo.addEventListener('input', function() {
+  angulo = angulo_disparo.value;
+  console.log("Angulo: ", angulo);
+  angulo_valor.textContent = angulo;
+  
+});
+
+velocidad_disparo.addEventListener('input', function() {
+  velocidad = velocidad_disparo.value;
+  console.log("Velocidad: ", velocidad);
+  velocidad_valor.textContent = velocidad;
+});
+
 
 //-- Elementos de la gui
 const gui = {
