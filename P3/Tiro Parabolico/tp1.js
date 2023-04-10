@@ -1,6 +1,17 @@
 console.log("Ejecutando JS...");
 
+//-- Declaración de variables y objetos
+
+
+
+//-- Obtención del canvas y de los elementos HTML a usar
 const canvas = document.getElementById("ctiro");
+
+const angulo_disparo = document.getElementById("angulo_disparo");
+const velocidad_disparo = document.getElementById("velocidad_disparo");
+
+const angulo_rango = document.getElementById("angulo_disparo");
+const velocidad_rango = document.getElementById("velocidad_disparo");
 
 //-- Definir el tamaño del canvas
 canvas.width = 400;
