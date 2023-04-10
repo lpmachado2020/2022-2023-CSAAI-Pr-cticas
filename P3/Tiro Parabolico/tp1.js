@@ -1,28 +1,28 @@
 console.log("Ejecutando JS...");
 
-//-- Declaración de variables y objetos
-
-
-
 //-- Obtención del canvas y de los elementos HTML a usar
 const canvas = document.getElementById("ctiro");
 
-const angulo_disparo = document.getElementById("angulo_disparo");
-const velocidad_disparo = document.getElementById("velocidad_disparo");
+const angulo_disparo = document.getElementById("rangeField2");
+const velocidad_disparo = document.getElementById("rangeField1");
 
-const angulo_rango = document.getElementById("angulo_disparo");
-const velocidad_rango = document.getElementById("velocidad_disparo");
-
-//-- Para darle valor a los deslizadores de velocidad y angulo de disparo
-angulo_disparo.innerHTML = angulo_rango.value;
-velocidad_disparo.innerHTML = velocidad_rango.value;
+const angulo_rango = document.getElementById("output2");
+const velocidad_rango = document.getElementById("output1");
 
 //-- Definir el tamaño del canvas
-canvas.width = 400;
-canvas.height = 200;
+canvas.width = 700;
+canvas.height = 300;
 
 //-- Obtener el contexto del canvas
 const ctx = canvas.getContext("2d");
+
+//-- Posicion inicial del proyectil
+let x = 0;
+let y = 260;
+
+//-- Tamaño del proyectil
+let lx = 40;
+let ly = 40;
 
 //-- función para pintar el proyectil
 function dibujarP(x,y,lx,ly,color) {
@@ -43,19 +43,11 @@ function dibujarP(x,y,lx,ly,color) {
   ctx.stroke();
 
   ctx.closePath();
+  console.log("Dibuja el proyectil correctamente")
 }
 
-//-- Coordenadas iniciales del proyectil
-let xop = 5;
-let yop = 345;
-let xp = xop;
-let yp = yop;
-
-// //-- Dibujar el objetivo
-// dibujarO(xo,yo); // Pintar el objetivo
-
 //-- Dibujar el proyectil
-dibujarP(xop, yop, 50, 50, "green"); // Pintar el proyectil
+dibujarP(x, y, lx, ly, "yellow"); // Pintar el proyectil
 
 // //-- Velocidad del proyectil
 // let velp = 1;
@@ -83,8 +75,6 @@ requestAnimationFrame(lanzar);
 // let xo = 500; //getRandomXO(xomin,xomax);
 // let yo = 370;
 
-// let x = 500;
-// let y = 350;
 
 // //-- Array que almacena las coordenadas del objeto
 // const coordenadas = [];
@@ -98,28 +88,32 @@ requestAnimationFrame(lanzar);
 // getRandomXO();
 // console.log(x,y)
 
+let xo = 500;
+let yo = 350;
 
-// //-- función para pintar el objetivo
-// function dibujarO(x,y) {
+//-- función para pintar el objetivo
+function dibujarO(xo,yo) {
 
-//   //-- Pintando el objetivo
-//   ctx.beginPath();
+  //-- Pintando el objetivo
+  ctx.beginPath();
 
-//   //-- Dibujar un circulo: coordenadas x,y del centro
-//   //-- Radio, Angulo inicial y angulo final
-//   ctx.arc(x, y, 25, 0, 2 * Math.PI);
-//   ctx.strokeStyle = 'blue';
-//   ctx.lineWidth = 2;
-//   ctx.fillStyle = 'red';
+  //-- Dibujar un circulo: coordenadas x,y del centro
+  //-- Radio, Angulo inicial y angulo final
+  ctx.arc(x, y, 25, 0, 2 * Math.PI);
+  ctx.strokeStyle = 'blue';
+  ctx.lineWidth = 2;
+  ctx.fillStyle = 'red';
 
-//   //-- Dibujar el relleno
-//   ctx.fill()    
+  //-- Dibujar el relleno
+  ctx.fill()    
 
-//   //-- Dibujar el trazo
-//   ctx.stroke();
+  //-- Dibujar el trazo
+  ctx.stroke();
 
-//   ctx.closePath();
-// }
+  ctx.closePath();
+  console.log("Dibuja el objeto correctamente")
+}
+
 
 //-- Elementos de la gui
 const gui = {

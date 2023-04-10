@@ -30,13 +30,17 @@
     </div>
 
     <div>
-        <p>Ángulo de disparo</p>
-        <input type="range" id="angulo_rango" min="0" max="90"><span id="angulo_disparo" class="valores"> 45</span>
+        <form oninput ="output2.value=parseInt(rangeField2.value)">
+            <p>Angulo de disparo:</p>
+            <input id="rangeField2" type="range" list="mydata" min="0" max="90" value="45">
+            <output id="output2" value="45">45</output>
     </div>
-
+    
     <div>
-        <p>Velocidad de disparo:</p>
-        <input type="range" id="velocidad_rango" min="0" max="100"><span id="velocidad_disparo" value="50" class="valores"> 50</span>
+        <form oninput ="output1.value=parseInt(rangeField1.value)">
+            <p>Velocidad de disparo:</p>
+            <input id="rangeField1" type="range" list="mydata" min="0" max="100" value="50">
+            <output id="output1" value="50">50</output>
     </div><br>
 
     <div>
