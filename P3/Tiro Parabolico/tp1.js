@@ -17,21 +17,21 @@ canvas.height = 300;
 const ctx = canvas.getContext("2d");
 
 //-- Posicion inicial del proyectil
-let x = 0;
-let y = 260;
+let xp = 0;
+let yp = 260;
 
 //-- Tamaño del proyectil
 let lx = 40;
 let ly = 40;
 
 //-- función para pintar el proyectil
-function dibujarP(x,y,lx,ly,color) {
+function dibujarP(xp,yp,lx,ly,color) {
 
   //-- Pintando el proyectil
   ctx.beginPath();
 
   //-- Definir un rectángulo de dimensiones lx x ly,
-  ctx.rect(x, y, lx, ly);
+  ctx.rect(xp, yp, lx, ly);
 
   //-- Color de relleno del rectángulo
   ctx.fillStyle = color;
@@ -47,52 +47,38 @@ function dibujarP(x,y,lx,ly,color) {
 }
 
 //-- Dibujar el proyectil
-dibujarP(x, y, lx, ly, "yellow"); // Pintar el proyectil
+dibujarP(xp, yp, lx, ly, "yellow"); // Pintar el proyectil
 
 // //-- Velocidad del proyectil
 // let velp = 1;
 
-//-- Función principal de actualización
-function lanzar() 
-{
-//-- Implementación del algoritmo de animación:
+// //-- Función principal de actualización
+// function lanzar() 
+// {
+// //-- Implementación del algoritmo de animación:
 
-//-- 1) Actualizar posición de los elementos
+// //-- 1) Actualizar posición de los elementos
 
-//-- 2) Borrar el canvas
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+// //-- 2) Borrar el canvas
+// ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-//-- 3) Pintar los elementos en el canvas
-dibujarP(xp, yp, 50, 50, "blue"); // Pintar el proyectil
+// //-- 3) Pintar los elementos en el canvas
+// dibujarP(xp, yp, 50, 50, "blue"); // Pintar el proyectil
 
-//-- 4) Repetir
-requestAnimationFrame(lanzar);
-}
-
-// //-- Coordenadas iniciales del objetivo
-// let xomin = 200;
-// let xomax = 770;
-// let xo = 500; //getRandomXO(xomin,xomax);
-// let yo = 370;
-
-
-// //-- Array que almacena las coordenadas del objeto
-// const coordenadas = [];
-
-// //-- Crear una funcion que genere posiciones nuevas del objeto
-// function getRandomXO(xomin, xomax, yo) {
-//   const x = Math.floor(Math.random() * (xomax - xomin + 1) + xomin);
-//   return {x: x, y: yo};
+// //-- 4) Repetir
+// requestAnimationFrame(lanzar);
 // }
 
-// getRandomXO();
-// console.log(x,y)
 
-let xo = 500;
-let yo = 350;
+
+//-- Coordenadas iniciales del objetivo
+let xomin = 25;
+let xomax = 625;
+let xo = Number(getRandomInt(xomin, xomax));
+let yo = 275;
 
 //-- función para pintar el objetivo
-function dibujarO(xo,yo) {
+function dibujarO(x,y) {
 
   //-- Pintando el objetivo
   ctx.beginPath();
@@ -100,7 +86,7 @@ function dibujarO(xo,yo) {
   //-- Dibujar un circulo: coordenadas x,y del centro
   //-- Radio, Angulo inicial y angulo final
   ctx.arc(x, y, 25, 0, 2 * Math.PI);
-  ctx.strokeStyle = 'blue';
+  ctx.strokeStyle = 'black';
   ctx.lineWidth = 2;
   ctx.fillStyle = 'red';
 
@@ -114,6 +100,16 @@ function dibujarO(xo,yo) {
   console.log("Dibuja el objeto correctamente")
 }
 
+dibujarO(x, y);
+
+
+//-- Crear una funcion que genere posiciones nuevas del objeto
+function getRandomXO(xomin, xomax) {
+  return Math.floor(Math.random() * (xomax - xomin + 1) + xomin);
+}
+
+getRandomXO();
+console.log("Coordenadas del objetivo: " + x + y)
 
 //-- Elementos de la gui
 const gui = {
