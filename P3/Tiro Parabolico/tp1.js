@@ -74,8 +74,8 @@ dibujarP(xp, yp, lx, ly, "yellow"); // Pintar el proyectil
 //-- Coordenadas iniciales del objetivo
 let xomin = 25;
 let xomax = 625;
-let xo = Number(getRandomInt(xomin, xomax));
-let yo = 275;
+let x = Number(getRandomInt(xomin, xomax));
+let y = 275;
 
 //-- función para pintar el objetivo
 function dibujarO(x,y) {
