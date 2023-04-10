@@ -13,6 +13,10 @@ const velocidad_disparo = document.getElementById("velocidad_disparo");
 const angulo_rango = document.getElementById("angulo_disparo");
 const velocidad_rango = document.getElementById("velocidad_disparo");
 
+//-- Para darle valor a los deslizadores de velocidad y angulo de disparo
+angulo_disparo.innerHTML = angulo_rango.value;
+velocidad_disparo.innerHTML = velocidad_rango.value;
+
 //-- Definir el tamaño del canvas
 canvas.width = 400;
 canvas.height = 200;
