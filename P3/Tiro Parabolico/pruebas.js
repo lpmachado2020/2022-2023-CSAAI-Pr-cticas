@@ -1,6 +1,10 @@
 //-- Declaración de variables y objetos
 
+
+
 //-- Obtención del canvas y de los elementos HTML a usar
+
+
 
 //-- Función principal de actualización
 function update() 

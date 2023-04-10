@@ -11,13 +11,13 @@
 
     <!-- Código javascript -->
     <script src="crono.js"></script>
-    <script src="prueba2.js" defer></script>
+    <script src="tp1.js" defer></script>
 
 </head>
 <body>
 
     <div>
-        <h1>Tiro parabólico</h1>
+        <h2>Tiro parabólico</h2>
     </div>
 
     <div>
@@ -31,13 +31,15 @@
 
     <div>
         <p>Ángulo de disparo</p>
-        <input type="range" max="" min="" step="" value="">
+        <input type="range" id="angulo_rango" min="0" max="90" value="45"/>
+        <output id="angulo_disparo" value="45" class="valores"> 45</output>
     </div>
 
     <div>
         <p>Velocidad de disparo:</p>
-        <input type="range" max="" min="" step="" value="">
-    </div>
+        <input type="range" id="velocidad_rango" min="0" max="100" value="50"/>
+        <output id="velocidad_disparo" value="50" class="valores"> 50</output>
+    </div><br>
 
     <div>
         <input type="button" id="btnLanzar" value="Lanzar" class="botones">
