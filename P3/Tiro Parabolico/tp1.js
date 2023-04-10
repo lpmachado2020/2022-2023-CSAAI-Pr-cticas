@@ -19,6 +19,8 @@ const ctx = canvas.getContext("2d");
 //-- Posicion inicial del proyectil
 let xp = 0;
 let yp = 260;
+// let xop = xp;
+// let yop = xy;
 
 //-- Tamaño del proyectil
 let lx = 40;
@@ -49,44 +51,22 @@ function dibujarP(xp,yp,lx,ly,color) {
 //-- Dibujar el proyectil
 dibujarP(xp, yp, lx, ly, "yellow"); // Pintar el proyectil
 
-// //-- Velocidad del proyectil
-// let velp = 1;
-
-// //-- Función principal de actualización
-// function lanzar() 
-// {
-// //-- Implementación del algoritmo de animación:
-
-// //-- 1) Actualizar posición de los elementos
-
-// //-- 2) Borrar el canvas
-// ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-// //-- 3) Pintar los elementos en el canvas
-// dibujarP(xp, yp, 50, 50, "blue"); // Pintar el proyectil
-
-// //-- 4) Repetir
-// requestAnimationFrame(lanzar);
-// }
-
-
 
 // -- Coordenadas iniciales del objetivo
 let xomin = 100;
 let xomax = 675;
-let x = getRandomInt(xomin, xomax);
-// let x = 310;
-let y = 275;
+let xo = getRandomInt(xomin, xomax);
+let yo = 275;
 
 //-- función para pintar el objetivo
-function dibujarO(x,y) {
+function dibujarO(xo,yo) {
 
   //-- Pintando el objetivo
   ctx.beginPath();
 
   //-- Dibujar un circulo: coordenadas x,y del centro
   //-- Radio, Angulo inicial y angulo final
-  ctx.arc(x, y, 25, 0, 2 * Math.PI);
+  ctx.arc(xo, yo, 25, 0, 2 * Math.PI);
   ctx.strokeStyle = 'black';
   ctx.lineWidth = 2;
   ctx.fillStyle = 'red';
@@ -101,10 +81,46 @@ function dibujarO(x,y) {
   console.log("Dibuja el objeto correctamente")
 }
 
-dibujarO(x, y);
+dibujarO(xo, yo);
 
 
-//-- Crear una funcion que genere posiciones nuevas del objeto
+// //-- Velocidad del proyectil
+// let velp = 1;
+
+// //-- Función principal de actualización
+// function lanzar() 
+// {
+// //-- Implementación del algoritmo de animación:
+
+// //-- 1) Actualizar posición de los elementos
+// xp = xp + velp;
+
+// //-- 2) Borrar el canvas
+// ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+// //-- 3) Pintar los elementos en el canvas
+// dibujarO(xo,yo); // Pintar el objetivo
+// dibujarP(xop, yop, 40, 40, "blue"); // Pintar el proyectil
+
+// //-- 4) Repetir
+// requestAnimationFrame(lanzar);
+// }
+
+// //-- Datos para el tiro parabolico
+// const g = 9.8; //-- Gravedad
+// let t = 0; //-- Tiempo
+
+// function tiroParabolico() {
+//   angp = Number(angulo_disparo);
+//   velp = Number(velocidad_disparo);
+
+//   xp = xop + velp * Math.cos(angp * Math.PI / 180) * t;
+//   yp = yop + velp * Math.sin(angp * Math.PI / 180) * t - 0.5 * gt * t * t;
+//   t = +0.1; //-- Cuanto avanza el proyectil en el tiro
+// }
+
+
+//-- Genera nuevas coordenadas para el objeto
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -149,3 +165,6 @@ gui.btnIniciar.onclick = () => {
   location.reload();
   console.log("Reset!!!")
 }
+
+// //-- Llamamos a la funcion por primera vez
+// lanzar();
