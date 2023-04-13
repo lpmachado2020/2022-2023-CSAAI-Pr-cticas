@@ -15,6 +15,13 @@ const state = {
     loop: null
 }
 
+// const reseat = document.getElementsByClassName("reseat");
+
+// reseat.onclick = () => {
+//     location.reload();
+//     console.log("Reset!!!")
+// }
+
 const generateGame = () => {
     const dimensions = selectors.tablero.getAttribute('grid-dimension')
 
@@ -208,5 +215,4 @@ const flipBackCards = () => {
     // Ponemos el contado de parejas de cartas a cero
     state.flippedCards = 0
 }
-
     

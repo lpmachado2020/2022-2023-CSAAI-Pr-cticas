@@ -15,6 +15,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .controls {
@@ -45,6 +46,7 @@ button {
 
 .grid-container {
     position: relative;
+    background-color: #f6eeff;
 }
 
 .tablero,
@@ -128,4 +130,14 @@ button {
 
 .highlight {
     color: #6f00fc;
+}
+
+body {
+    background-color: #cca5ff;
+}
+
+.title {
+    letter-spacing: 30px;
+    margin-top: 20px;
+    text-align: center;
 }
