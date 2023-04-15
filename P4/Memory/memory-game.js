@@ -141,8 +141,8 @@ const startGame = () => {
     state.loop = setInterval(() => {
         state.totalTime++
 
-        selectors.movimientos.innerText = `${state.totalFlips} movimientos`
-        selectors.timer.innerText = `tiempo: ${state.totalTime} sec`
+        selectors.movimientos.innerText = `Movimientos: ${state.totalFlips}`
+        selectors.timer.innerText = `Tiempo: ${state.totalTime} sec`
     }, 1000)
 }
 
