@@ -25,18 +25,16 @@ reseat.onclick = () => {
 };
 
 let nivel = document.getElementById("nivel");
+let valorSeleccionado = parseInt(nivel.value);
 
 nivel.addEventListener("change", function() {
-    let valorSeleccionado = parseInt(nivel.value);
-    if(!isNaN(valorSeleccionado)) {
-        console.log("Valor seleccionado: " + valorSeleccionado)
-    } else {
-        console.log("Valor no numerico");
-    }
+    valorSeleccionado = parseInt(nivel.value);
+    selectors.tablero.setAttribute("grid-dimension", valorSeleccionado);
+    console.log("Valor seleccionado: " + valorSeleccionado);
 });
 
 const generateGame = () => {
-    const dimensions = valorSeleccionado.value;
+    let dimensions = selectors.tablero.getAttribute("grid-dimension");
     console.log("Dimensiones del juego: " + dimensions);
 
     //-- Nos aseguramos de que el número de dimensiones es par
