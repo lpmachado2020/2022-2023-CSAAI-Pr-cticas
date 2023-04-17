@@ -6,7 +6,8 @@ const selectors = {
     movimientos: document.querySelector('.movimientos'),
     timer: document.querySelector('.timer'),
     comenzar: document.querySelector('button'),
-    win: document.querySelector('.win')
+    win: document.querySelector('.win'),
+    nivel: document.querySelector('#nivel')
 }
 
 const state = {
@@ -23,6 +24,9 @@ reseat.onclick = () => {
     location.reload();
     console.log("Reset!!!")
 };
+
+const valorSeleccionado = nivel.value;
+console.log(`Nivel seleccionado: ${valorSeleccionado}`);
 
 const generateGame = () => {
     const dimensions = selectors.tablero.getAttribute('grid-dimension')
