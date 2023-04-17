@@ -7,7 +7,6 @@ const selectors = {
     timer: document.querySelector('.timer'),
     comenzar: document.querySelector('button'),
     win: document.querySelector('.win'),
-    nivel: document.querySelector('#nivel')
 }
 
 const state = {
@@ -25,11 +24,20 @@ reseat.onclick = () => {
     console.log("Reset!!!")
 };
 
-const valorSeleccionado = nivel.value;
-console.log(`Nivel seleccionado: ${valorSeleccionado}`);
+let nivel = document.getElementById("nivel");
+
+nivel.addEventListener("change", function() {
+    let valorSeleccionado = parseInt(nivel.value);
+    if(!isNaN(valorSeleccionado)) {
+        console.log("Valor seleccionado: " + valorSeleccionado)
+    } else {
+        console.log("Valor no numerico");
+    }
+});
 
 const generateGame = () => {
-    const dimensions = selectors.tablero.getAttribute('grid-dimension')
+    const dimensions = valorSeleccionado.value;
+    console.log("Dimensiones del juego: " + dimensions);
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
