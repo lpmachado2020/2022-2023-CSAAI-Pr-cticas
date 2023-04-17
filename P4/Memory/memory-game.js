@@ -1,3 +1,5 @@
+console.log("Ejecutando JS...");
+
 const selectors = {
     gridContainer: document.querySelector('.grid-container'),
     tablero: document.querySelector('.tablero'),
@@ -15,12 +17,12 @@ const state = {
     loop: null
 }
 
-// const reseat = document.getElementsByClassName("reseat");
+const reseat = document.getElementById("reseat");
 
-// reseat.onclick = () => {
-//     location.reload();
-//     console.log("Reset!!!")
-// }
+reseat.onclick = () => {
+    location.reload();
+    console.log("Reset!!!")
+};
 
 const generateGame = () => {
     const dimensions = selectors.tablero.getAttribute('grid-dimension')
