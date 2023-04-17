@@ -24,18 +24,8 @@ reseat.onclick = () => {
     console.log("Reset!!!")
 };
 
-let nivel = document.getElementById("nivel");
-let valorSeleccionado = parseInt(nivel.value);
-
-nivel.addEventListener("change", function() {
-    valorSeleccionado = parseInt(nivel.value);
-    selectors.tablero.setAttribute("grid-dimension", valorSeleccionado);
-    console.log("Valor seleccionado: " + valorSeleccionado);
-});
 
 const generateGame = () => {
-    let dimensions = selectors.tablero.getAttribute("grid-dimension");
-    console.log("Dimensiones del juego: " + dimensions);
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
