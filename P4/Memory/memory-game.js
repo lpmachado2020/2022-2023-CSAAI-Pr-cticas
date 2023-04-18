@@ -6,7 +6,6 @@ const selectors = {
     movimientos: document.querySelector('.movimientos'),
     timer: document.querySelector('.timer'),
     comenzar: document.querySelector('button'),
-    // reiniciar: document.querySelector('.reseat'),
     win: document.querySelector('.win')
 }
 
@@ -18,19 +17,12 @@ const state = {
     loop: null
 }
 
+//-- Boton reiniciar
 const reiniciar = document.getElementById("reseat");
 
 reiniciar.onclick = () => {
     location.reload();
-    console.log("Reset!!!")
 };
-
-// let nivel = document.getElementById("nivel");
-
-// nivel.addEventListener("change", function() {
-//     let valorSeleccionado = parseInt(nivel.value);
-    
-// });
 
 const generateGame = () => {
     const dimensions = selectors.tablero.getAttribute('grid-dimension')
@@ -133,12 +125,6 @@ const attachEventListeners = () => {
     })
 }
 
-// Generamos el juego
-generateGame()
-
-// Asignamos las funciones de callback para determinados eventos
-attachEventListeners()
-
 const startGame = () => {
     // Iniciamos el estado de juego
     state.gameStarted = true
@@ -225,3 +211,15 @@ const flipBackCards = () => {
     // Ponemos el contado de parejas de cartas a cero
     state.flippedCards = 0
 }
+
+let nivel = document.getElementById("nivel");
+
+nivel.onchange = () => {
+    
+}
+
+// Generamos el juego
+generateGame()
+
+// Asignamos las funciones de callback para determinados eventos
+attachEventListeners()
