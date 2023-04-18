@@ -149,10 +149,6 @@ p {
     font-size: 18px;
 }
 
-.text {
-    float: center;
-}
-
 .opciones {
     justify-content: center;
     align-items: center;
