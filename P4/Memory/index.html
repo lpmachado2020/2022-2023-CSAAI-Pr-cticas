@@ -13,19 +13,22 @@
         <script src="memory-game.js" defer></script>
     </head>
     <body>
-        <!-- <div>
+        <div>
             <h1 class="title">MEMORY GAME</h1>
-        </div> -->
+            <p>Seleccione un nivel antes de comenzar</p>
+            <p>¡Eliga con cautela! Una vez seleccionado solo podra cambiarlo si reinicia el juego o si gana</p>
+        </div>
+
         <div class="game">
             <div class="controles">
                 <span><button type="button" id="start">Comenzar</button></span>
                 <span><button type="button" id="reseat">Reiniciar</button></span>
                 <div class="display"><br>
                     <div>
-                        <label for="nivel">Seleccione un nivel:</label>
                         <select id="nivel">
+                            <option value="0" selected>Seleccione un nivel...</option>
                             <option value="2">Nivel Fácil</option>
-                            <option value="4" selected>Nivel Medio</option>
+                            <option value="4">Nivel Medio</option>
                             <option value="6">Nivel Difícil</option>
                         </select>
                     </div><br>
@@ -33,13 +36,9 @@
                     <div class="timer">Tiempo: 0 sec</div>
                 </div><br>
             </div>
+
             <div class="grid-container">
-                <div class="tablero">
-                    <div class="card">
-                        <div class="card-front"></div>
-                        <div class="card-back"></div>
-                    </div>
-                </div>    
+                <div class="tablero"></div>    
                 <div class="win">¡Has Ganado!</div>
             </div>
         </div>
