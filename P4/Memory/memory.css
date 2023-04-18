@@ -12,7 +12,7 @@ html {
 
 .game {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -154,8 +154,31 @@ p {
 }
 
 .opciones {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.controles {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.movimientos {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div {
+    display: block;
 }
