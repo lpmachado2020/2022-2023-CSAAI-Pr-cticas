@@ -212,26 +212,6 @@ const flipBackCards = () => {
     state.flippedCards = 0
 }
 
-let nivel = document.getElementById("nivel");
-
-
-function mostrarDimension() {
-    dimensions = nivel.value
-    console.log("Dimensiones del juego: "+ dimensions);
-
-    if (dimensions === "2") {
-        selectors.tablero.setAttribute('grid-dimension', '2')
-    } else if (dimensions === "4") {
-        selectors.tablero.setAttribute('grid-dimension', '4')
-    } else if (dimensions === "6") {
-        selectors.tablero.setAttribute('grid-dimension', '6')
-    }
-
-    generateGame()
-};
-
-
-
 // Generamos el juego
 generateGame()
 
