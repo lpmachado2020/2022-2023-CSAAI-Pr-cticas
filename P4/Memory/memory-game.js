@@ -6,7 +6,8 @@ const selectors = {
     movimientos: document.querySelector('.movimientos'),
     timer: document.querySelector('.timer'),
     comenzar: document.querySelector('button'),
-    win: document.querySelector('.win'),
+    // reiniciar: document.querySelector('.reseat'),
+    win: document.querySelector('.win')
 }
 
 const state = {
@@ -17,15 +18,22 @@ const state = {
     loop: null
 }
 
-const reseat = document.getElementById("reseat");
+const reiniciar = document.getElementById("reseat");
 
-reseat.onclick = () => {
+reiniciar.onclick = () => {
     location.reload();
     console.log("Reset!!!")
 };
 
+// let nivel = document.getElementById("nivel");
+
+// nivel.addEventListener("change", function() {
+//     let valorSeleccionado = parseInt(nivel.value);
+    
+// });
 
 const generateGame = () => {
+    const dimensions = selectors.tablero.getAttribute('grid-dimension')
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
@@ -33,8 +41,8 @@ const generateGame = () => {
         throw new Error("Las dimensiones del tablero deben ser un número par.")
     }
 
-    //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
-    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍']
+    //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego (18 elementos para todas las dimensiones)
+    const emojis = ['🌸', '🪷', '🌹', '🥀', '🌺', '🪻', '🌻', '🌼', '🌷', '🏵️', '🌵', '🍀','🍁','🍂','🌾','☘️','🍃','💐']
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
