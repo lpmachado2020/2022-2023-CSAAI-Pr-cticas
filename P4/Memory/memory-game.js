@@ -38,7 +38,7 @@ const generateGame = () => {
     }
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego (18 elementos para todas las dimensiones)
-    const emojis = ['🌸', '🪷', '🌹', '🥀', '🌺', '🪻', '🌻', '🌼', '🌷', '🏵️', '🌵', '🍀','🍁','🍂','🌾','☘️','🍃','💐']
+    const emojis = ['🌸', '🪷', '🌹', '🥀', '🌺', '🌴', '🌻', '🌼', '🌷', '🏵️', '🌵', '🍀','🍁','🍂','🌾','☘️','🍃','💐']
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
@@ -235,9 +235,6 @@ nivel.addEventListener("change", function() {
     }
     generateGame();
 });
-
-// // Generamos el juego
-// generateGame()
 
 // Asignamos las funciones de callback para determinados eventos
 attachEventListeners()
