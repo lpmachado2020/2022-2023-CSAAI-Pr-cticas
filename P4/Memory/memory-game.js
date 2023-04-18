@@ -24,8 +24,12 @@ reiniciar.onclick = () => {
     location.reload();
 };
 
+let nivel = document.getElementById("nivel");
+
 const generateGame = () => {
+    valorSeleccionado = parseInt(nivel.value);
     const dimensions = selectors.tablero.getAttribute('grid-dimension')
+    console.log("Comprobacion de que se genera el juego");
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
@@ -41,6 +45,7 @@ const generateGame = () => {
     // Es decir, si tenemos un array con 10 emojis, vamos a elegir el cuadrado de las
     // dimensiones entre dos, para asegurarnos de que cubrimos todas las cartas
     const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
+    console.log("otra comprobacion mas");
 
     //-- Después descolocamos las posiciones para asegurarnos de que las parejas de cartas
     // están desordenadas.
@@ -212,8 +217,25 @@ const flipBackCards = () => {
     state.flippedCards = 0
 }
 
-// Generamos el juego
-generateGame()
+nivel.addEventListener("change", function() {
+    let valorSeleccionado = parseInt(nivel.value);
+    let dimensions;
+    // console.log("Valor seleccionado: " + valorSeleccionado)
+    if (valorSeleccionado == 2) {
+        valorSeleccionado = dimensions;
+        console.log("El nivel seleccionado es el facil")
+    } else if (valorSeleccionado == 4) {
+        valorSeleccionado = dimensions;
+        console.log("El nivel seleccionado es el medio")
+    } else if (valorSeleccionado == 6) {
+        valorSeleccionado = dimensions;
+        console.log("El nivel seleccionado es el dificil")
+    }
+    generateGame();
+});
+
+// // Generamos el juego
+// generateGame()
 
 // Asignamos las funciones de callback para determinados eventos
 attachEventListeners()

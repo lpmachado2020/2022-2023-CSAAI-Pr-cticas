@@ -6,10 +6,13 @@ nivel.addEventListener("change", function() {
     let valorSeleccionado = parseInt(nivel.value);
     // console.log("Valor seleccionado: " + valorSeleccionado)
     if (valorSeleccionado == 2) {
+        valorSeleccionado = dimensions;
         console.log("El nivel seleccionado es el facil")
     } else if (valorSeleccionado == 4) {
+        valorSeleccionado = dimensions;
         console.log("El nivel seleccionado es el medio")
     } else if (valorSeleccionado == 6) {
+        valorSeleccionado = dimensions;
         console.log("El nivel seleccionado es el dificil")
     }
 });
