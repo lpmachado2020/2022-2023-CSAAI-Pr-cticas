@@ -1,11 +1,16 @@
 body {
-    background-color: grey;
-  }
+  background-color: grey;
+}
 
 #cloud {
-  display: none;
+display: none;
 }
 
 #imagesrchide {
-  display: none;
+display: none;
+}
+
+#red {
+width: 400px;
+height: auto;
 }
