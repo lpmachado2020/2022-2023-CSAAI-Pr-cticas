@@ -4,6 +4,7 @@ const gui = {
   bsend : document.getElementById("bsend"),
   netdelay : document.getElementById("netdelay"),
   netdelayvalue : document.getElementById("netdelay_value"),
+  //-- Añadimos los elementos del deslizador de nodos como lo del deslizador del retardo
   nodes : document.getElementById("nodes"),
   nodesvalue : document.getElementById("nodes_value"),
 }
@@ -23,6 +24,7 @@ const state = {
   sendingPackage:0,
   netDelay: 1,
   netDelayDefault: 1,
+  //-- Añadimos los estados como los del delay
   nodes: 1,
   nodesvalue: 1,
   loop: null
@@ -31,6 +33,9 @@ const state = {
 //-- Iniciar el valor del deslizador con el valor de la 
 // variable de estado para el delay
 gui.netdelayvalue.innerHTML = state.netDelay;
+
+//-- Iniciar el valor del deslizador con el valor de la 
+// variable de estado para los nodos
 gui.nodesvalue.innerHTML = state.nodes;
 
 //-- Cuando está disponible cargo la imagen con la nube para represntar el destino
@@ -59,6 +64,8 @@ gui.netdelay.oninput = () => {
   state.netDelay = gui.netdelay.value;
 }
 
+//-- función de callback para actualizar los valores del 
+// deslizador y la variable de estado para los nodos
 gui.nodes.oninput = () => {
   gui.nodesvalue.innerHTML = gui.nodes.value;
   state.nodes = gui.nodes.value;
@@ -152,6 +159,7 @@ const sendImage = () => {
     }
 
     console.log("Enviando...");
+    //-- Añadimos el estado de los nodos multiplicando, ya que por cada nodo se corresponde el delay seleccionado
   }, state.netDelay * state.nodes)
 }
 
