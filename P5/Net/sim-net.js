@@ -4,6 +4,8 @@ const gui = {
   bsend : document.getElementById("bsend"),
   netdelay : document.getElementById("netdelay"),
   netdelayvalue : document.getElementById("netdelay_value"),
+  nodes : document.getElementById("nodes"),
+  nodesvalue : document.getElementById("nodes_value"),
 }
 
 //-- Obtener elementos del DOM
@@ -21,12 +23,15 @@ const state = {
   sendingPackage:0,
   netDelay: 1,
   netDelayDefault: 1,
+  nodes: 1,
+  nodesvalue: 1,
   loop: null
 }
 
 //-- Iniciar el valor del deslizador con el valor de la 
 // variable de estado para el delay
 gui.netdelayvalue.innerHTML = state.netDelay;
+gui.nodesvalue.innerHTML = state.nodes;
 
 //-- Cuando está disponible cargo la imagen con la nube para represntar el destino
 imgCloud.onload = function () {
@@ -52,6 +57,11 @@ gui.bsend.onclick = () => {
 gui.netdelay.oninput = () => {
   gui.netdelayvalue.innerHTML = gui.netdelay.value;
   state.netDelay = gui.netdelay.value;
+}
+
+gui.nodes.oninput = () => {
+  gui.nodesvalue.innerHTML = gui.nodes.value;
+  state.nodes = gui.nodes.value;
 }
 
 //-- simulación del envío de la imagen
@@ -142,7 +152,7 @@ const sendImage = () => {
     }
 
     console.log("Enviando...");
-  }, state.netDelay )
+  }, state.netDelay * state.nodes)
 }
 
 console.log("Red preparada...");
