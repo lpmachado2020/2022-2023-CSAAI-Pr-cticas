@@ -10,22 +10,22 @@
     <title>Simulando la Red</title>
 </head>
 <body>
+    <h3>Seleccione los nodos y el retardo de los nodos antes de enviar la imagen</h3>
+    <p>Nodos de la red</p>
+    <input type="range" id="nodes" min="3" max="8" value="3"/><output id="nodes_value"></output>
+
+    <p>Retardo de los nodos</p>
+    <input type="range" id="netdelay" min="1" max="5" value="1"/><output id="netdelay_value"></output>
+
     <p>Imagen en Origen</p>
     <img src="logoURJC.png" id="imagesrc">
     <img src="logoURJC.png" id="imagesrchide">    
     <img src="cloud.png" id="cloud">
-    <button id="bsend">Enviar</button>    
+    <button id="bsend">Enviar</button>
+    <button id="breseat">Reiniciar</button>     
     <p>Imagen en Destino</p>
     <canvas id="canvas"></canvas>
-    
-    <p>Retardo de la red</p>
-    <input type="range" id="netdelay" min="1" max="5" value="1"/>
-    <p id="netdelay_value">1</p>
 
-    <p>Nodos de la red</p>
-    <input type="range" id="nodes" min="3" max="8" value="3"/>
-    <p id="nodes_value">3</p>
-    
     <p>La red</p>
     <img src="net.svg" id="red">    
 </body>

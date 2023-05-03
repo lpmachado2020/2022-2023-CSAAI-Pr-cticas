@@ -7,6 +7,8 @@ const gui = {
   //-- Añadimos los elementos del deslizador de nodos como lo del deslizador del retardo
   nodes : document.getElementById("nodes"),
   nodesvalue : document.getElementById("nodes_value"),
+  //-- Añadimos el boton de reiniciar
+  reseat : document.getElementById("breseat"),
 }
 
 //-- Obtener elementos del DOM
@@ -25,8 +27,9 @@ const state = {
   netDelay: 1,
   netDelayDefault: 1,
   //-- Añadimos los estados como los del delay
-  nodes: 1,
-  nodesvalue: 1,
+  // esta vez son igual a 3 porque es su valor incial
+  nodes: 3,
+  nodesvalue: 3,
   loop: null
 }
 
@@ -38,7 +41,7 @@ gui.netdelayvalue.innerHTML = state.netDelay;
 // variable de estado para los nodos
 gui.nodesvalue.innerHTML = state.nodes;
 
-//-- Cuando está disponible cargo la imagen con la nube para represntar el destino
+//-- Cuando está disponible cargo la imagen con la nube para representar el destino
 imgCloud.onload = function () {
 
   //-- Se establece como tamaño del canvas el mismo
@@ -49,13 +52,17 @@ imgCloud.onload = function () {
   //-- Situar la imagen original en el canvas
   //-- No se han hecho manipulaciones todavía
   ctx.drawImage(imgCloud, 0, 0);
-
 }
 
 //-- función de callback para el envío de la imagen
 gui.bsend.onclick = () => {
   sendImage()
 }
+
+//-- Función para reiniciar el envío
+gui.reseat.onclick = () => {
+  location.reload();
+};
 
 //-- función de callback para actualizar los valores del 
 // deslizador y la variable de estado para el delay
@@ -150,6 +157,8 @@ const sendImage = () => {
     //-- Poner la imagen modificada en el canvas
     ctx.putImageData(imgData, 0, 0);
 
+    console.log("Enviando...");
+
     // Paramos el loop si hemos terminado de enviar
     if (state.sendingPackage == state.totalPackages) {
       ctx.drawImage(imgBack, 0, 0); 
@@ -158,9 +167,11 @@ const sendImage = () => {
       clearInterval(state.loop);
     }
 
-    console.log("Enviando...");
     //-- Añadimos el estado de los nodos multiplicando, ya que por cada nodo se corresponde el delay seleccionado
   }, state.netDelay * state.nodes)
+  console.log("Delay seleccionado: " + state.netDelay);
+  console.log("Nodos seleccionado: " + state.nodes);
+  console.log("Retardo final: " + state.netDelay * state.nodes)
 }
 
 console.log("Red preparada...");
